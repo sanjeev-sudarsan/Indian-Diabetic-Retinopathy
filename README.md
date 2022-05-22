@@ -16,10 +16,10 @@ Before running the script, make sure the requirements are met by installing from
 #### Evaluate
 ```python main.py --eval True --dir_name "Experiment-name"```
 
-#### Visualize (Only for Diabetic Retinopathy)
+#### Visualize
 ```python main.py --visualize True --dir_name "Experiment-name"```
 
-3. The files related to the experiment can be found under **/experiments/Experiment-name** 
+3. The files related to the experiment can be found under **/experiments/Experiment-name**.
 
 ## Directory structure
 ```
