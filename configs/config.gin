@@ -1,0 +1,72 @@
+#################### Parameters not to change ####################
+# Architectures
+vgg_like.base_filters = 8
+vgg_like.n_blocks = 3
+vgg_like.dense_units = 32
+TransferLearningModels.first_fine_tune_layer = None
+
+# Layers
+vgg_block.kernel_size = (3, 3)
+
+
+# Input pipeline
+# Dataset directory
+load.name = 'idrid_dataset'
+
+
+# Preprocessing
+load.binarize = True
+resize.desired_size = 300
+
+
+GuidedBackprop.upsample_size=(300, 300)
+GradCAM.upsample_size=(300, 300)
+GradCAM.const=1e-5
+
+#################### Optional Parameters to change ####################
+
+# Architectures
+vgg_like.dropout_rate = 0.2
+TransferLearningModels.dropout_rate = 0.2
+TransferLearningModels.reg_factor = 0.01
+
+# Training
+Trainer.total_steps = 1000 
+Trainer.log_interval = 2e2
+Trainer.ckpt_interval = 2e2
+Trainer.learning_rate = 1e-3
+
+# Preprocessing
+prepare.caching = True
+
+#################### Necessary Parameters to check before running the code ####################
+
+# Select the required model from the below options (uncomment the required model and comment the other models)
+# get_model.types = 'vgg_like'
+get_model.types = 'resnet50'
+# get_model.types = 'efficientnet'
+
+
+# Input pipeline
+# Specify the path where the IDRID dataset is located. 
+# Make sure the name of the folder containing the images and labels is "IDRID_dataset".
+load.data_dir = '/home/data/'
+
+# Uncomment the required preprocess type and comment the other one. Specify the required batch size
+# bt_preprocess is graham preprocessing and gc_preprocess is Green Channel preprocessing.
+
+# load.preprocess_type = 'bt_preprocess'
+load.preprocess_type = 'gc_preprocess'
+prepare.batch_size = 16
+
+
+# Evaluation
+# Specify the name of the required checkpoint for evaluation and visualization. 
+# The name of the checkpoint should be a string and should have only the checkpoint name and not the file extension.
+# For e.g. a checkpoint saved as ckpt-8.data-00000-of-00001 should be specified as "ckpt-8"
+# When evaluating or visualizing make sure you use the same run folder name that you used for training.
+# If checkpoint name is set as None, the latest checkpoint is used from the run folder.
+
+Evaluator.checkpoint_name = "model-6"
+Visualizer.layer_name = None
+Visualizer.checkpoint_name = None
