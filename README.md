@@ -56,7 +56,7 @@ diabetic_retinopathy
 # Results
 * **Hyperparameter Tuning:**
 <p align="center">
-	  <img src="Images/val-acc-hptune.png" />
+	  <img src="Indian-Diabetic-Retinopathy/Images/val-acc-hptune.png" />
 </p>
 
 * **Evaluation Accuracy:**
@@ -65,10 +65,10 @@ diabetic_retinopathy
 
 * **Confusion Matrix:**
 <p align="center">
-	  <img src="Images/cm_dr.png" />
+	  <img src="Indian-Diabetic-Retinopathy/Images/cm_dr.png" />
 </p>
 
 * **Deep Visualization:**
 <p align="center">
-	  <img src="Images/gc_vis_52.png" />
+	  <img src="Indian-Diabetic-Retinopathy/Images/gc_vis_52.png" />
 </p>
