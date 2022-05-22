@@ -53,9 +53,11 @@ diabetic_retinopathy
 |   |-- utils_misc.py
 |   |-- utils_params.py
 
+```
+
 # Results
 
-* **Hyperparameter Tuning:**
+**Hyperparameter Tuning:**
 <p align="center">
 	  <img src="Images/val-acc-hptune.png" />
 </p>
@@ -66,7 +68,7 @@ diabetic_retinopathy
 
 * **Confusion Matrix:**
 <p align="center">
-	  <img src="Images/bt_cm.png" />
+	  <img src="Images/cm_dr.png" />
 </p>
 
 * **Deep Visualization:**
