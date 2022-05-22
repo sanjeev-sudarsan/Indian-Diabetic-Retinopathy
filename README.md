@@ -25,7 +25,7 @@ Before running the script, make sure the requirements are met by installing from
 ```
 dl-lab-21w-team11
 
-diabetic_retinopathy
+Indian-Diabetic-Retinopathy
 |-- .gitignore
 |-- README.md
 |-- requirements.txt
