@@ -10,6 +10,7 @@ __pycache__/
 [Ee]xperiments/
 [Dd]atasets/
 [Dd]ataset/
+[Ii]mages/
 wandb/
 *.out
 
